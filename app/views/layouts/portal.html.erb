@@ -1,0 +1,62 @@
+<%#
+# Application Layout
+
+This view template is used as the layout
+for every page that Administrate generates.
+
+By default, it renders:
+- Navigation
+- Content for a search bar
+  (if provided by a `content_for` block in a nested page)
+- Flashes
+- Links to stylesheets and JavaScripts
+%>
+
+<!DOCTYPE html>
+<html lang="<%= I18n.locale %>">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <meta name= "turbolinks-cache-control" content= "no-cache">
+    <%= javascript_pack_tag 'portal' %>
+    <%= stylesheet_pack_tag 'portal' %>
+    <%= csrf_meta_tags %>
+    <% if content_for?(:head) %>
+      <%= yield(:head) %>
+    <% else %>
+      <title><%= @portal.page_title%></title>
+    <% end %>
+  </head>
+  <body>
+    <div class="antialiased <%= @theme %>">
+      <main class="main-content min-h-screen flex flex-col bg-white dark:bg-slate-900" role="main">
+        <% if !@is_plain_layout_enabled %>
+          <%= render "public/api/v1/portals/header", portal: @portal %>
+        <% end %>
+        <%= yield %>
+        <% if !@is_plain_layout_enabled %>
+          <%= render "public/api/v1/portals/footer" %>
+        <% end %>
+      </main>
+    </div>
+  </body>
+  <style>
+  :root {
+    color-scheme: '<%= @theme %>';
+  }
+  </style>
+  <script>
+    window.portalConfig = {
+      portalSlug: '<%= @portal.slug %>',
+      localeCode: '<%= @locale %>',
+      searchTranslations: {
+        searchPlaceholder: '<%= I18n.t('public_portal.search.search_placeholder') %>',
+        emptyPlaceholder: '<%= I18n.t('public_portal.search.empty_placeholder') %>',
+        loadingPlaceholder: '<%= I18n.t('public_portal.search.loading_placeholder') %>',
+        resultsTitle: '<%= I18n.t('public_portal.search.results_title') %>',
+      },
+      isPlainLayoutEnabled: '<%= @is_plain_layout_enabled %>',
+      tocHeader: '<%= I18n.t('public_portal.toc_header') %>'
+    };
+  </script>
+</html>

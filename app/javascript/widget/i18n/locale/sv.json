@@ -1,0 +1,136 @@
+{
+  "COMPONENTS": {
+    "FILE_BUBBLE": {
+      "DOWNLOAD": "Hämta",
+      "UPLOADING": "Laddar upp..."
+    },
+    "FORM_BUBBLE": {
+      "SUBMIT": "Skicka"
+    },
+    "MESSAGE_BUBBLE": {
+      "RETRY": "Skicka meddelande igen",
+      "ERROR_MESSAGE": "Kunde inte skicka, försök igen"
+    }
+  },
+  "TEAM_AVAILABILITY": {
+    "ONLINE": "Vi är online",
+    "OFFLINE": "Vi är borta för tillfället"
+  },
+  "REPLY_TIME": {
+    "IN_A_FEW_MINUTES": "Svarar vanligtvis inom några minuter",
+    "IN_A_FEW_HOURS": "Svarar vanligtvis inom några timmar",
+    "IN_A_DAY": "Svar vanligtvis inom en dag",
+    "BACK_IN": "We will be back online"
+  },
+  "DAY_NAMES": [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "START_CONVERSATION": "Starta konversation",
+  "END_CONVERSATION": "End Conversation",
+  "CONTINUE_CONVERSATION": "Fortsätt konversation",
+  "YOU": "You",
+  "START_NEW_CONVERSATION": "Starta konversation",
+  "VIEW_UNREAD_MESSAGES": "You have unread messages",
+  "UNREAD_VIEW": {
+    "VIEW_MESSAGES_BUTTON": "Se nya meddelanden",
+    "CLOSE_MESSAGES_BUTTON": "Stäng",
+    "COMPANY_FROM": "från",
+    "BOT": "Bot"
+  },
+  "BUBBLE": {
+    "LABEL": "Chatta med oss"
+  },
+  "POWERED_BY": "Drivs av Chatwoot",
+  "EMAIL_PLACEHOLDER": "Ange din e-postadress",
+  "CHAT_PLACEHOLDER": "Skriv ditt meddelande",
+  "TODAY": "Idag",
+  "YESTERDAY": "Igår",
+  "PRE_CHAT_FORM": {
+    "FIELDS": {
+      "FULL_NAME": {
+        "LABEL": "Fullständigt namn",
+        "PLACEHOLDER": "Vänligen ange ditt fullständiga namn",
+        "REQUIRED_ERROR": "Fullständigt namn krävs"
+      },
+      "EMAIL_ADDRESS": {
+        "LABEL": "E-postadress",
+        "PLACEHOLDER": "Vänligen ange din e-postadress",
+        "REQUIRED_ERROR": "Email Address is required",
+        "VALID_ERROR": "Ange en giltig e-postadress"
+      },
+      "PHONE_NUMBER": {
+        "LABEL": "Telefonnummer",
+        "PLACEHOLDER": "Please enter your phone number",
+        "REQUIRED_ERROR": "Phone Number is required",
+        "DIAL_CODE_VALID_ERROR": "Please select a country code",
+        "VALID_ERROR": "Please enter a valid phone number",
+        "DROPDOWN_EMPTY": "Inga resultat hittades"
+      },
+      "MESSAGE": {
+        "LABEL": "Meddelande",
+        "PLACEHOLDER": "Vänligen ange ditt fullständiga namn",
+        "ERROR": "Meddelandet är för kort"
+      }
+    },
+    "CAMPAIGN_HEADER": "Ange ditt namn och e-post innan du startar konversationen",
+    "IS_REQUIRED": "is required",
+    "REQUIRED": "Required"
+  },
+  "FILE_SIZE_LIMIT": "Filen överskrider gränsen för {MAXIMUM_FILE_UPLOAD_SIZE} bifogade filer",
+  "CHAT_FORM": {
+    "INVALID": {
+      "FIELD": "Ogiltigt fält"
+    }
+  },
+  "EMOJI": {
+    "PLACEHOLDER": "Search emojis",
+    "NOT_FOUND": "No emoji match your search"
+  },
+  "CSAT": {
+    "TITLE": "Betygsätt din konversation",
+    "SUBMITTED_TITLE": "Tack för att du lämnat in omdömet",
+    "PLACEHOLDER": "Berätta mer för oss!"
+  },
+  "EMAIL_TRANSCRIPT": {
+    "BUTTON_TEXT": "Skicka konversationstranskribering",
+    "SEND_EMAIL_SUCCESS": "Chattranskriberingen har skickats",
+    "SEND_EMAIL_ERROR": "Ett fel uppstod, vänligen försök igen"
+  },
+  "INTEGRATIONS": {
+    "DYTE": {
+      "CLICK_HERE_TO_JOIN": "Click here to join",
+      "LEAVE_THE_ROOM": "Leave the call"
+    }
+  },
+  "PORTAL": {
+    "POPULAR_ARTICLES": "Popular Articles",
+    "VIEW_ALL_ARTICLES": "View all articles",
+    "IFRAME_LOAD_ERROR": "There was an error loading the article, please refresh the page and try again."
+  },
+  "ATTACHMENTS": {
+    "image": {
+      "CONTENT": "Bildmeddelande"
+    },
+    "audio": {
+      "CONTENT": "Ljudmeddelande"
+    },
+    "video": {
+      "CONTENT": "Videomeddelande"
+    },
+    "file": {
+      "CONTENT": "Bifogad fil"
+    },
+    "location": {
+      "CONTENT": "Plats"
+    },
+    "fallback": {
+      "CONTENT": "har delat en webbadress"
+    }
+  }
+}

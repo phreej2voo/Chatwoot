@@ -1,0 +1,50 @@
+<% content_for :head do %>
+  <title><%= @article.title %> | <%= @portal.name %></title>
+  <% if @article.meta["title"].present? %>
+    <meta name="title" content="<%= @article.meta["title"] %>">
+  <% end %>
+  <% if @article.meta["description"].present? %>
+    <meta name="description" content="<%= @article.meta["description"] %>">
+  <% end %>
+  <% if @article.meta["tags"].present? %>
+    <meta name="tags" content="<%= @article.meta["tags"].join(',') %>">
+  <% end %>
+<% end %>
+
+<% if !@is_plain_layout_enabled %>
+<div class="bg-woot-50 dark:bg-woot-900 py-8 shadow-inner" style="<%= generate_portal_bg(@portal.color, @theme) %>">
+  <div class="max-w-6xl px-8 pt-8 pb-16 mx-auto space-y-4 w-full">
+    <div>
+      <a
+        class="text-slate-700 dark:text-slate-100 hover:underline leading-8 text-sm font-semibold"
+        href="/hc/<%= @portal.slug %>/<%= @article.category&.locale %><%= @theme.present? ? '?theme='+@theme : ''  %>"
+      >
+        Home
+      </a>
+      <span class="text-xs text-slate-600 dark:text-slate-200  px-1">/</span>
+      <% if @article.category %>
+        <a
+          class="text-slate-700 dark:text-slate-100 hover:underline leading-8 text-sm font-semibold"
+          href="/hc/<%= @portal.slug %>/<%= @article.category.locale %>/categories/<%= @article.category.slug %><%= @theme.present? ? '?theme='+@theme : ''  %>"
+        >
+          <%= @article.category&.name %>
+        </a>
+      <% else %>
+        <span class="text-slate-700 dark:text-slate-100 leading-8 text-sm font-semibold" > Uncategorized </span>
+      <% end %>
+    </div>
+    <%= render "public/api/v1/portals/articles/article_header", article: @article %>
+  </div>
+</div>
+<% else %>
+<div class="max-w-6xl p-8 mx-auto space-y-4 w-full <%= @is_plain_layout_enabled ? 'px-8 py-4' : 'p-8' %>">
+  <%= render "public/api/v1/portals/articles/article_header", article: @article %>
+</div>
+<% end %>
+
+<div class="flex max-w-6xl w-full px-8 mx-auto">
+  <article id="cw-article-content" class="flex-grow flex-2 mx-auto text-slate-800 dark:text-slate-50 text-lg max-w-3xl prose dark:prose-invert break-words w-full <%= @is_plain_layout_enabled ? 'py-4' : 'py-12' %>">
+    <%= @parsed_content %>
+  </article>
+  <div class="flex-1" id="cw-hc-toc"></div>
+</div>
